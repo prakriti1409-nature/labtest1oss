@@ -1,0 +1,42 @@
+import numpy as np
+
+def passi(a,n):
+    for i in range(len(a)):
+        if a[i][0] == n:
+            return a[i][3]
+
+def passinn(a,n,n2):
+    for i in range(len(a)):
+        if a[i][0] == n2:
+            a[i][5] = n
+            return True
+
+arr = (["flight no.","dep station","arr station","dep time","eco","bui"],
+       [2000,"ba","na","12:00","10","12"],
+       [2001,"lko","nep","1:00","60","30"],
+       [2004,"kol","del","23:00","70","45"],
+       [2006,"mli","miz","16:00","100","28"])
+
+flight_schedule = np.array(arr)
+
+print(flight_schedule)
+
+print("passenger info")
+
+arr2 = ([" id","name","arr station","fn","es","bs"],
+        [1,'nature','na',[2000,2,2]],
+        [2,'sime','del',[2001,1,2]],
+        [3,'cop','lko',[2000,7,0]],
+        [4,'hema','kol',[2000,3,]])
+
+passenger_records = np.array(arr2)
+
+print(passenger_records)
+
+p = passi(arr2, 2)
+print(p)
+
+z = passinn(arr2, 13, 2000)
+print(z)
+
+print(arr)
